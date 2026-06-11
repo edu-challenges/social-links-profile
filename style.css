@@ -80,12 +80,12 @@ h6 {
   --scala: 1.2;
   --base: 0.9rem;
 
-  --size-x-large: calc(var(--size-large) * var(--scala));
-  --size-large: calc(var(--size-medium) * var(--scala));
-  --size-medium: calc(var(--size-normal) * var(--scala));
+  --size-xl: calc(var(--size-l) * var(--scala));
+  --size-l: calc(var(--size-m) * var(--scala));
+  --size-m: calc(var(--size-normal) * var(--scala));
   --size-normal: var(--base);
-  --size-small: calc(var(--size-normal) / var(--scala));
-  --size-x-small: calc(var(--size-small) / var(--scala));
+  --size-sm: calc(var(--size-normal) / var(--scala));
+  --size-xs: calc(var(--size-sm) / var(--scala));
 
   --font: "Inter", sans-serif;
 
@@ -112,22 +112,66 @@ body {
 
   article {
     background-color: var(--grey-800);
+    border-radius: 0.8rem;
 
-    header > p:first-of-type {
-      color: var(--green);
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
 
-    h2 {
-      font-weight: var(--font-weight-semibold);
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      img {
+        width: 5.5rem;
+        border-radius: 50%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          font-weight: var(--font-weight-semibold);
+          font-size: var(--size-xl);
+          letter-spacing: 2%;
+        }
+
+        > p:first-of-type {
+          color: var(--green);
+          font-weight: var(--font-weight-semibold);
+        }
+      }
     }
 
     ul {
       display: flex;
       flex-direction: column;
+      align-items: center;
+
       gap: 1rem;
+      padding: 0;
 
       li {
         list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--grey-700);
+        width: 285px;
+        height: 45px;
+        border-radius: 0.5rem;
+
+        a {
+          color: var(--white);
+          text-decoration: none;
+          font-weight: var(--font-weight-semibold);
+        }
       }
     }
   }
@@ -137,7 +181,8 @@ body {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+  a {
+    color: var(--green);
+  }
 }
