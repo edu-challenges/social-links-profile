@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: To be published
-- Live Site URL: To be published
+- Solution URL: https://github.com/edu-challenges/social-links-profile
+- Live Site URL: https://edu-challenges.github.io/social-links-profile/
 
 ## My process
 
